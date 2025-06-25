@@ -1,0 +1,276 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/notebook/ontologies/2025/5/untitled-ontology-3"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/notebook/ontologies/2025/5/untitled-ontology-3">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Enfermeira"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Florianopolis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Funcionarios"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HospitalCelsoRamos"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Localizacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medico"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UTI"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Coordinates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Have"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsCoordinatedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#IsPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#worksin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Email"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Matricula"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fernando_Reis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Juliana"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Enfermeira"/>
+        <Class IRI="#Funcionarios"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Florianopolis"/>
+        <Class IRI="#Localizacao"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Medico"/>
+        <Class IRI="#Funcionarios"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UTI"/>
+        <Class IRI="#HospitalCelsoRamos"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Enfermeira"/>
+        <Class IRI="#Medico"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Funcionarios"/>
+        <Class IRI="#HospitalCelsoRamos"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Funcionarios"/>
+        <Class IRI="#HospitalCelsoRamos"/>
+        <Class IRI="#Localizacao"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Medico"/>
+        <NamedIndividual IRI="#Fernando_Reis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Enfermeira"/>
+        <NamedIndividual IRI="#Juliana"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Fernando_Reis"/>
+        <NamedIndividual IRI="#Juliana"/>
+    </DifferentIndividuals>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Matricula"/>
+        <NamedIndividual IRI="#Fernando_Reis"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">54321</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Email"/>
+        <NamedIndividual IRI="#Juliana"/>
+        <Literal>juliana@hsc.com.br</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Matricula"/>
+        <NamedIndividual IRI="#Juliana"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">12345</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#Is"/>
+        <ObjectProperty IRI="#Have"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#Coordinates"/>
+        <ObjectProperty IRI="#IsCoordinatedBy"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Coordinates"/>
+        <Class IRI="#Medico"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Have"/>
+        <Class IRI="#HospitalCelsoRamos"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#Is"/>
+        <Class IRI="#Localizacao"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsCoordinatedBy"/>
+        <Class IRI="#HospitalCelsoRamos"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsPartOf"/>
+        <Class IRI="#Enfermeira"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#IsPartOf"/>
+        <Class IRI="#Medico"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#worksin"/>
+        <Class IRI="#Enfermeira"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#worksin"/>
+        <Class IRI="#Medico"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Coordinates"/>
+        <Class IRI="#UTI"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Have"/>
+        <Class IRI="#Localizacao"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#Is"/>
+        <Class IRI="#Florianopolis"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsCoordinatedBy"/>
+        <Class IRI="#Funcionarios"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#IsPartOf"/>
+        <Class IRI="#Funcionarios"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#worksin"/>
+        <Class IRI="#UTI"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Email"/>
+        <DataProperty IRI="#Email"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#Matricula"/>
+        <DataProperty IRI="#Matricula"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#Email"/>
+        <Datatype abbreviatedIRI="rdf:langString"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Matricula"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Coordinates</IRI>
+        <Literal xml:lang="pt-br">Coordena</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Email</IRI>
+        <Literal xml:lang="pt-br">Canal digital para comunicações</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Enfermeira</IRI>
+        <Literal xml:lang="pt-br">Provedor de cuidados de saúde.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Funcionarios</IRI>
+        <Literal xml:lang="pt-br">Pessoa que trabalha para um empregador.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Have</IRI>
+        <Literal xml:lang="pt-br">Tem</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HospitalCelsoRamos</IRI>
+        <Literal xml:lang="pt-br">Estrutura social abstra que regula o comportamento de um grupo de indivíduos.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Is</IRI>
+        <Literal xml:lang="pt-br">É</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IsCoordinatedBy</IRI>
+        <Literal xml:lang="pt-br">É coordenado por</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IsPartOf</IRI>
+        <Literal xml:lang="pt-br">É parte de</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Localizacao</IRI>
+        <Literal xml:lang="pt-br">Processo de localizar/encontrar uma unidade</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Matricula</IRI>
+        <Literal xml:lang="pt-br">Número de identificaçãp de funcionários</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Medico</IRI>
+        <Literal xml:lang="pt-br">Profissional da saúde autorizado pelo Estado a exercer a medicina.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UTI</IRI>
+        <Literal xml:lang="pt-br">Unidade de terapia intensiva.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#worksin</IRI>
+        <Literal xml:lang="pt-br">Trabalha em</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
